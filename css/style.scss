@@ -27,6 +27,7 @@
     display: -o-flex;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 // animated fadeInLeft
 
@@ -112,6 +113,9 @@ body{
         }
     }
     &__info-wrap{
+    }
+    &__number{
+        text-decoration: none;
         > span{
             font-size: 24px;
             font-family: DinPro-Regular;
@@ -122,26 +126,26 @@ body{
             }
             
         }
-        a{
-            font-size: 16px;
-            font-family: DinPro-Regular;
-            display: block;
-            text-align: right;
-            color: #3176a9;
-            text-decoration: none;
-            margin-top: 5px;
-            &:hover{
-                span{
-                   border-bottom: 1px solid #3176a9; 
-                }
+    }
+    &__email{
+        font-size: 16px;
+        font-family: DinPro-Regular;
+        display: block;
+        text-align: right;
+        color: #3176a9;
+        text-decoration: none;
+        margin-top: 5px;
+        &:hover{
+            span{
+                border-bottom: 1px solid #3176a9; 
             }
-            > img{
-                padding-right: 10px;
-            }
-            > span{
-                display: inline-block;
-                vertical-align: super;
-            }
+        }
+        > img{
+            padding-right: 10px;
+        }
+        > span{
+            display: inline-block;
+            vertical-align: super;
         }
     }
     
@@ -252,7 +256,6 @@ body{
         display: -ms-flex;
         display: -o-flex;
         display: flex;
-        cursor: pointer;
         &:nth-child(1), &:nth-child(2){
             margin-top: 0;
         }
@@ -262,22 +265,12 @@ body{
                 font-size: 18px;
                 color: #000;
                 background: #f2efe8;
-                padding: 5px;
+                padding: 5px 10px;
                 display: inline;
-                line-height: 1.5;
+                line-height: 1.6;
                 position: relative;
                 z-index: 1;
-                &::before{
-                    display: none;
-                    width: 333px;
-                    height: calc(100% + 7px);
-                    background: #fff;
-                    content: "";
-                    z-index: -1;
-                    position: absolute;
-                    top: -4px;
-                    left: -30px;
-                }
+                white-space: pre-line;
             }
             i{
                 color: #7ca2bf;
@@ -290,25 +283,24 @@ body{
             }
         }
         &:first-child{
+            cursor: pointer;
             &:hover{
                 li{
                     span{
                         background: transparent;
-                        z-index: 2;
-                        &::before  {
-                            display: block;
-                            z-index: -1;
-                        }
+                        z-index: 5;
                     }
                     i{
                         background: #fff;
                         z-index: 3;
                         transform: rotate(180deg);
+                        box-shadow: 5px 0 5px -5px #333;
                     }
                 }
                 .services__drop-down{
                     display: block;
                     z-index: 2;
+                    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
                 }
             }
         }
@@ -321,10 +313,12 @@ body{
         box-sizing: border-box;
         padding: 24px;
         left: -6px;
+        top: -23px;
     }
     &__drop-down-list{
         width: 100%;
         border-top: 1px solid #dfdfdf;
+        margin-top: 100px;
         li{
             margin-top: 20px;
             padding-left: 10px;
@@ -460,36 +454,40 @@ body{
     }
     &__info-wrap{
         margin-top: 80px;
-            > span{
-                font-size: 24px;
-                font-family: DinPro-Regular;
-                color: #6d6d6d;
-                span{
-                    font-weight: bold;
-                    color: #000;
-                }
-
+    }
+    &__number{
+        text-decoration: none;
+        > span{
+            font-size: 24px;
+            font-family: DinPro-Regular;
+            color: #6d6d6d;
+            span{
+                font-weight: bold;
+                color: #000;
             }
-            a{
-                font-size: 16px;
-                font-family: DinPro-Regular;
-                display: block;
-                text-align: left;
-                color: #3176a9;
-                text-decoration: none;
-                margin-top: 5px;
-                &:hover{
-                    span{
-                       border-bottom: 1px solid #3176a9; 
-                    }
+
+        }
+        
+    }
+    &__email{
+            font-size: 16px;
+            font-family: DinPro-Regular;
+            display: block;
+            text-align: left;
+            color: #3176a9;
+            text-decoration: none;
+            margin-top: 5px;
+            &:hover{
+                span{
+                    border-bottom: 1px solid #3176a9; 
                 }
-                > img{
-                    padding-right: 10px;
-                }
-                > span{
-                    display: inline-block;
-                    vertical-align: super;
-                }
+            }
+            > img{
+                padding-right: 10px;
+            }
+            > span{
+                display: inline-block;
+                vertical-align: super;
             }
     }
     &__adress-wrap{
@@ -523,8 +521,21 @@ body{
         display: -o-flex;
         display: flex;
         justify-content: space-between;
+        position: relative;
+        &::after{
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #e0e0e0;
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            content: "";
+            transform: translate(-50%,-50%);
+        }
     }
     &__case-block{
+        position: relative;
         width: 460px;
         height: 170px;
         background: #fff;
@@ -535,7 +546,30 @@ body{
         display: -ms-flex;
         display: -o-flex;
         display: flex;
-        
+        &:first-child{
+            &::before{
+                position: absolute;
+                left: -35px;
+                top: calc(50% - 25px);
+                content: "";
+                width: 50px;
+                height: 50px;
+                background: #f8f8f8;
+                border-radius: 50%;
+            }
+        }
+        &:last-child{
+            &::after{
+                position: absolute;
+                right: -35px;
+                top: calc(50% - 25px);
+                content: "";
+                width: 50px;
+                height: 50px;
+                background: #f8f8f8;
+                border-radius: 50%;
+            }
+        }
     }
     &__part_left{
         flex-basis: 25%;
@@ -603,21 +637,18 @@ body{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding-left: 20px;
-        padding-right: 20px;
     }
     &__services-block{
-        width: 33.3%;
-        padding: 10px;
+        width: 30%;
         box-sizing: border-box;
         h2{
             font-family: RobotoSlab-Regular;
             font-size: 18px;
             color: #fff;
-            padding: 5px;
             display: block;
             line-height: 1.5;
             margin-top: 50px;
+            white-space: pre-line;
         }
     }
     &__services-list{
@@ -628,7 +659,47 @@ body{
                 font-family: DinPro-Regular;
                 color: #98999a;
                 text-decoration: none;
+                &:hover{
+                    border-bottom: 1px solid #98999a;
+                }
             }
         }
     }
+    &__info-wrap{
+        > span{
+            color: #fff;
+            font-size: 14px;
+            font-family: DinPro-Regular;
+        }
+    }
+    &__number-nav{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+        li{
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+    &__email{
+        font-size: 14px;
+        font-family: DinPro-Regular;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        margin-top: 5px;
+        text-decoration: none;
+        > span{
+            display: inline-block;
+            vertical-align: super; 
+        }
+        > img{
+            padding-right: 6px;  
+        }
+    }
+    
 }
