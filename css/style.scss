@@ -294,13 +294,13 @@ body{
                         background: #fff;
                         z-index: 3;
                         transform: rotate(180deg);
-                        box-shadow: 5px 0 5px -5px #333;
+                        box-shadow: 5px 0 5px -5px rgba(0,0,0,0.05);
                     }
                 }
                 .services__drop-down{
                     display: block;
                     z-index: 2;
-                    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.02);
                 }
             }
         }
