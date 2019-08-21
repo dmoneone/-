@@ -637,6 +637,7 @@ body{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        padding-bottom: 90px;
     }
     &__services-block{
         width: 30%;
@@ -666,13 +667,26 @@ body{
         }
     }
     &__info-wrap{
+        margin-top: 50px;
+        > h4{
+            padding-top: 20px;
+            display: block;
+            font-family: DinPro-Medium;
+            font-size: 16px;
+            color: #efcd43;
+        }
         > span{
             color: #fff;
             font-size: 14px;
             font-family: DinPro-Regular;
+            line-height: 1.4;
+            margin-top: 25px;
+            display: block;
         }
     }
     &__number-nav{
+        display: block;
+        margin-top: 20px;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
@@ -680,8 +694,12 @@ body{
         display: flex;
         flex-direction: column;
         li{
+            margin-top: 2px;
             a{
                 text-decoration: none;
+                font-size: 14px;
+                font-family: DinPro-Regular;
+                color: #fff;
             }
         }
     }
@@ -691,8 +709,13 @@ body{
         display: block;
         color: #fff;
         text-decoration: none;
-        margin-top: 5px;
+        margin-top: 25px;
         text-decoration: none;
+        &:hover{
+            > span{
+                border-bottom: 1px solid #fff;
+            }
+        }
         > span{
             display: inline-block;
             vertical-align: super; 
@@ -700,6 +723,9 @@ body{
         > img{
             padding-right: 6px;  
         }
+    }
+    &__logo-wrap{
+        margin-top: 85px;
     }
     
 }
