@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>Юнифин</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="font_awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
     <div class="header">
@@ -317,10 +318,8 @@
                         <i class="fas fa-angle-down"></i>
                         
                         <div class="drop-down-calc">
+                          <div class="calc-wrapper">
                            <div class="drop-down-list">
-                               <div class="cost-wrap">
-                                   <span>0 000 000 Р</span>
-                               </div>
                                 <div class="range-block">
                                     <div class="range-wrap">
                                         <label for="range">Количество договоров</label>
@@ -328,7 +327,7 @@
 
                                     </div>
                                     <div class="range-wrap">
-                                        <input type="text" class="input-for-range">
+                                        <input type="text" class="input-for-range"  placeholder="Кол-во">
                                     </div>
                                 </div>
                                 <div class="range-block">
@@ -338,7 +337,7 @@
 
                                     </div>
                                     <div class="range-wrap">
-                                        <input type="text" class="input-for-range">
+                                        <input type="text" class="input-for-range"  placeholder="Кол-во">
                                     </div>
                                 </div>
                                 <div class="range-block">
@@ -348,7 +347,7 @@
 
                                     </div>
                                     <div class="range-wrap">
-                                        <input type="text" class="input-for-range">
+                                        <input type="text" class="input-for-range"  placeholder="Кол-во">
                                     </div>
                                 </div>
                                 <div class="range-block">
@@ -358,12 +357,12 @@
 
                                     </div>
                                     <div class="range-wrap">
-                                        <input type="text" class="input-for-range">
+                                        <input type="text" class="input-for-range" placeholder="Кол-во чел">
                                     </div>
                                 </div>
                                 <div class="range-block">
                                     <div class="range-wrap">
-                                        <label for="range">Вылюта баланса</label>
+                                        <label for="range">Вылюта баланса <span>(руб)</span></label>
                                         <input type="range" class="range">
 
                                     </div>
@@ -373,7 +372,7 @@
                                 </div>
                                 <div class="range-block">
                                     <div class="range-wrap">
-                                        <label for="range">Выручка от реализации</label>
+                                        <label for="range">Выручка от реализации <span>(руб)</span></label>
                                         <input type="range" class="range">
 
                                     </div>
@@ -382,6 +381,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="cost-wrap">
+                                <span>0 000 000 Р</span>
+                            </div>
+                          </div> 
                         </div>
                     </div>
                 </div>
@@ -438,6 +441,9 @@
                 </div>
                 <div class="risk-wrap">
                     <div class="risk-management-header">
+                        <h2>Управляйте своими <span>рисками</span></h2>
+                        <p>Получите 100% страховку от налоговых
+                         претензий</p>
                         <button class="send-request">
                             Отправить заявку
                         </button>
@@ -511,5 +517,8 @@
         </div>
     </div>
     <script src="js/pop-up.js"></script>
+    <script src="js/jQuery-v3.3.1.js"></script>
+    <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>
