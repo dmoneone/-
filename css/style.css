@@ -693,6 +693,11 @@ body {
         left: 0; }
 
 .calc-buttons-wrap {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
   padding: 30px;
   box-sizing: border-box;
   background: #fff; }
@@ -706,30 +711,152 @@ body {
     font-size: 18px;
     border-radius: 30px;
     cursor: pointer; }
-  .calc-buttons-wrap span {
-    position: relative; }
-    .calc-buttons-wrap span span {
+  .calc-buttons-wrap div#calc {
+    margin-left: 30px;
+    max-width: 220px;
+    width: 100%;
+    position: relative;
+    padding: 17px 12px 15px 12px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; }
+    .calc-buttons-wrap div#calc > span {
       font-family: DinPro-Medium;
       font-size: 18px;
       border-bottom: 1px dashed #dbdbdb;
       padding: 3px;
-      cursor: pointer;
-      margin-left: 30px; }
-    .calc-buttons-wrap span i {
+      cursor: pointer; }
+    .calc-buttons-wrap div#calc i {
       color: #7ca2bf; }
-    .calc-buttons-wrap span:hover .drop-down-calc {
-      display: block; }
-
-.drop-down-calc {
-  width: 375px;
-  height: 525px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: white;
-  z-index: 10;
-  display: none;
-  border: solid; }
+    .calc-buttons-wrap div#calc:hover {
+      box-shadow: 0px -1px 3px 0px rgba(0, 0, 0, 0.36);
+      background: #fff; }
+      .calc-buttons-wrap div#calc:hover i {
+        transform: rotate(-180deg); }
+      .calc-buttons-wrap div#calc:hover::after {
+        width: 100%;
+        height: 5px;
+        background: #fff;
+        content: "";
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: 15; }
+      .calc-buttons-wrap div#calc:hover .drop-down-calc {
+        display: block; }
+  .calc-buttons-wrap .drop-down-calc {
+    width: 330px;
+    height: 525px;
+    position: absolute;
+    left: 0;
+    top: 49px;
+    background: white;
+    z-index: 10;
+    display: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.36);
+    padding: 15px;
+    box-sizing: border-box; }
+    .calc-buttons-wrap .drop-down-calc .drop-down-list {
+      position: relative;
+      width: 100%;
+      height: 100%; }
+      .calc-buttons-wrap .drop-down-calc .drop-down-list .cost-wrap {
+        background: #efcd43;
+        position: absolute;
+        left: -10px;
+        bottom: -30px;
+        width: 135px;
+        height: 45px;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px; }
+        .calc-buttons-wrap .drop-down-calc .drop-down-list .cost-wrap span {
+          font-size: 20px;
+          color: #000;
+          font-family: DinPro-Regular;
+          position: relative; }
+      .calc-buttons-wrap .drop-down-calc .drop-down-list .range-block {
+        margin-top: 30px;
+        width: 100%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between; }
+        .calc-buttons-wrap .drop-down-calc .drop-down-list .range-block .range-wrap label {
+          display: block;
+          font-family: DinPro-Medium;
+          font-size: 16px;
+          color: #000; }
+        .calc-buttons-wrap .drop-down-calc .drop-down-list .range-block .range-wrap .input-for-range {
+          align-self: center;
+          width: 90px;
+          margin-top: 11px;
+          border: 0;
+          padding: 5px;
+          box-sizing: border-box;
+          border-bottom: 1px solid #dfdfdf;
+          cursor: pointer; }
+        .calc-buttons-wrap .drop-down-calc .drop-down-list .range-block .range-wrap .range {
+          margin-top: 20px;
+          -webkit-appearance: none;
+          width: 180px;
+          height: 1px;
+          border: none;
+          background: #dfdfdf;
+          outline: none;
+          /* no focus outline */
+          cursor: pointer;
+          /* thumb */ }
+          .calc-buttons-wrap .drop-down-calc .drop-down-list .range-block .range-wrap .range::-moz-range-track {
+            border: inherit;
+            background: transparent; }
+          .calc-buttons-wrap .drop-down-calc .drop-down-list .range-block .range-wrap .range::-ms-track {
+            border: inherit;
+            color: transparent;
+            /* don't drawn vertical reference line */
+            background: transparent; }
+          .calc-buttons-wrap .drop-down-calc .drop-down-list .range-block .range-wrap .range::-ms-fill-lower, .calc-buttons-wrap .drop-down-calc .drop-down-list .range-block .range-wrap .range::-ms-fill-upper {
+            background: transparent; }
+          .calc-buttons-wrap .drop-down-calc .drop-down-list .range-block .range-wrap .range::-ms-tooltip {
+            display: none; }
+          .calc-buttons-wrap .drop-down-calc .drop-down-list .range-block .range-wrap .range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: none;
+            border-radius: 50%;
+            background: #efbc43;
+            border: 5px solid #fff;
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.31);
+            box-sizing: border-box; }
+          .calc-buttons-wrap .drop-down-calc .drop-down-list .range-block .range-wrap .range::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border: none;
+            border-radius: 50%;
+            background: #efbc43;
+            border: 5px solid #fff;
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.31);
+            box-sizing: border-box; }
+          .calc-buttons-wrap .drop-down-calc .drop-down-list .range-block .range-wrap .range::-ms-thumb {
+            width: 20px;
+            height: 20px;
+            border: none;
+            border-radius: 50%;
+            background: #efbc43;
+            border: 5px solid #fff;
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.31);
+            box-sizing: border-box; }
 
 .calc-content {
   padding: 40px 30px 50px 30px;
@@ -773,15 +900,26 @@ body {
         top: 6px;
         left: 0; }
   .calc-content .result-slider {
-    position: relative; }
-    .calc-content .result-slider .btn-right {
+    position: relative;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center; }
+    .calc-content .result-slider .btn-right, .calc-content .result-slider .btn-left {
+      width: 30px;
       position: absolute;
       right: 0;
       top: 50px;
       cursor: pointer; }
-      .calc-content .result-slider .btn-right i {
+      .calc-content .result-slider .btn-right i, .calc-content .result-slider .btn-left i {
         font-size: 30px;
         color: #efbe4a; }
+        .calc-content .result-slider .btn-right i:hover, .calc-content .result-slider .btn-left i:hover {
+          color: #dfdfdf; }
+    .calc-content .result-slider .btn-left {
+      left: 0; }
   .calc-content .results-line {
     padding-top: 30px;
     display: -webkit-flex;
