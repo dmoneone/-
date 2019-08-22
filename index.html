@@ -44,9 +44,6 @@
                 <button class="more-details-button" id="risk-management">Подробнее</button>
             </div>
         </div>
-        <div class="banner__border-wrap">
-            <img src="img/border-circle.png" alt="">
-        </div>
     </div>
     <div class="services" id="services">
        <div class="content-holder">
@@ -157,7 +154,7 @@
                </div>
                 <h2>Завершенные кейсы </h2>
                 <div class="cases__cases-line">
-                    <div class="cases__case-block">
+                    <div class="cases__case-block" id="deawoo-reorg">
                         <div class="cases__part_left">
                             <div class="cases__logo-wrap">
                                 <img src="img/daewoo-logo.png" alt="">
@@ -311,8 +308,8 @@
                     </p>
                     <p>Без актуальной информации руководство предприятия принимает решение «вслепую», в результате чего совершаются неверные шаги, приводящие к негативным последствиям.</p>
                 </div>
-            </div>
-                <div class="buttons-wrap">
+                </div>
+                <div class="calc-buttons-wrap">
                     <button class="send-request">
                         Отправить заявку
                     </button>
@@ -323,48 +320,49 @@
                         </div>
                     </span>
                 </div>
-                <div class="text-wrap">
-                    <h2>Больше, чем просто аудит:</h2>
-                    <ul>
-                        <li>Разработка рекомендаций по устранению ошибок в бухгалтерском и налоговом учете,</li>
-                        <li>Оптимизация налогообложения, системы бухгалтерского учета и документооборота,</li>
-                        <li>Оперативная консультация по всем вопросам бухгалтерского, налогового и трудового законодательства (при необходимости в письменном виде, без ограничений по объему).</li>
-                        <li>Проверим ваших контрагентов.</li>
-                    </ul>
-                </div>
-                <div class="text-wrap">
-                    <h2>Как выглядят результаты:</h2>
-                    <div class="result-slider">
-                       <div class="btn-right">
-                           <i class="fas fa-chevron-right"></i>
-                       </div>
-                        <div class="results-line">
+                <div class="calc-content">
+                    <div class="text-wrap">
+                        <h2>Больше, чем просто аудит:</h2>
+                        <ul>
+                            <li>Разработка рекомендаций по устранению ошибок в бухгалтерском и налоговом учете,</li>
+                            <li>Оптимизация налогообложения, системы бухгалтерского учета и документооборота,</li>
+                            <li>Оперативная консультация по всем вопросам бухгалтерского, налогового и трудового законодательства (при необходимости в письменном виде, без ограничений по объему).</li>
+                            <li>Проверим ваших контрагентов.</li>
+                        </ul>
+                    </div>
+                    <div class="text-wrap">
+                        <h2>Как выглядят результаты:</h2>
+                        <div class="result-slider">
+                           <div class="btn-right">
+                               <i class="fas fa-chevron-right"></i>
+                           </div>
+                            <div class="results-line">
 
-                           <a href="">
-                            <div class="result-block">
-                                <div class="img-wrap">
-                                    <img src="img/PDF.png" alt="">
+                               <a href="">
+                                <div class="result-block">
+                                    <div class="img-wrap">
+                                        <img src="img/PDF.png" alt="">
+                                    </div>
+                                    <span>Аудиторское 
+                                    заключение</span>
                                 </div>
-                                <span>Аудиторское 
-                                заключение</span>
-                            </div>
-                           </a>
-                           <a href="">
-                            <div class="result-block">
-                                <div class="img-wrap">
-                                    <img src="img/DOC.png" alt="">
+                               </a>
+                               <a href="">
+                                <div class="result-block">
+                                    <div class="img-wrap">
+                                        <img src="img/DOC.png" alt="">
+                                    </div>
+                                    <span>Письменный 
+                                    отчет</span>
                                 </div>
-                                <span>Письменный 
-                                отчет</span>
+                               </a>
                             </div>
-                           </a>
-                        </div>
-                    </div> 
+                        </div> 
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
     <div class="pop-up-risk-management-wrap">
         <div class="risk-management-holder" onclick="event.stopPropagation()">
                 <div class="close-pop-up-risk">
@@ -390,6 +388,58 @@
                         </div>
                     </div>
                 </div>
+        </div>
+    </div>
+    <div class="pop-up-reorganization-of-daewoo-wrap">
+        <div class="reorganization-of-daewoo-holder" onclick="event.stopPropagation()">
+            <div class="close-pop-up-reorganization-of-daewoo">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="deawoo-wrap">
+                <div class="deawoo-header">
+                    <div class="text-wrap">
+                        <h2>Внедрение управленческого учёта
+                        <span>в сфере добычи полезных 
+                        ископаемых</span></h2>
+                    </div>
+                </div>
+                <div class="deawoo-block">
+                    <div class="logo-wrap">
+                        <img src="img/daewoo-logo.png" alt="">
+                    </div>
+                    <div class="text-wrap">
+                        <h4>Daewoo</h4>
+                        <p>Один из крупнейших южнокорейских чеболей (финансово-промышленных групп). Компания основана 22 марта 1967 года под названием Daewoo Industrial. </p>
+                    </div>
+                </div>
+                <div class="deawoo-content-wrap">
+                    <div class="text-wrap">
+                        <h2>Ситуация</h2>
+                        <p>Во время беседы выяснилось, что в компании фактически нет управленческого учета. Периодически главный бухгалтер направляла собственнику табличку в Excel — в ней был набор показателей, не менявшийся уже много лет. Как показатели влияют друг на друга и почему вообще именно эти цифры каждый раз включаются в отчет, предприниматель не знал.</p>
+                        <h2>Задачи</h2>
+                        <ul>
+                            <li>Внедрение управленческого учета в компанию</li>
+                        </ul>
+                        <h2>Решение</h2>
+                        <p>Эксперты провели экспресс-проверку финансово-хозяйственной деятельности компании. Выяснилось, что на предприятии отсутствовало описание производственных процессов, а в учетной системе не было отражено движение затрат по каждому процессу. Это означало, что руководство не знало себестоимости добычи конкретного материала. Без такой информации невозможно было понять, какие направления наиболее выгодные, а какие — убыточные, во что стоит инвестировать, а с чем лучше вообще покончить. Соответственно, и установи</p>
+                        <div class="result-text">
+                            <h2>Результат</h2>
+                            <p>По итогам проекта предприятие получило прозрачную систему финансовых показателей. Теперь руководство знало, во сколько обходится производство каждого вида продукции, и могло планировать работу на основе достоверных данных. 2019 год снова стал прибыльным для предприятия.</p>
+                        </div>
+                    </div>
+                    <div class="deawoo-footer">
+                    <div class="text-wrap">
+                        <span>
+                            ЮниФин внедрит управленческий учет и в вашу компанию. 
+                        Доверьтесь опыту наших сотрудников, и мы увеличим эффективность
+                        </span>
+                    </div>
+                    <button class="send-request">
+                        Отправить заявку
+                    </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="js/pop-up.js"></script>
