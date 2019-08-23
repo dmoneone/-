@@ -905,7 +905,7 @@ body{
     }
     .drop-down-calc{
         width: 330px;
-        height: 525px;
+        height: 480px;
         position: absolute;
         left: 0;
         top: 49px;
@@ -991,35 +991,26 @@ body{
                         .range{
                             margin-top: 20px;
                             -webkit-appearance: none;
-                            //-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-                            width: 180px;
+                            -moz-apperance: none;
+                            border-radius: 6px;
                             height: 1px;
-                            border: none;
-                            background: #dfdfdf;
-                            outline: none; /* no focus outline */
-                            cursor: pointer;
+                            width: 180px;
+                            background-image: -webkit-gradient(linear,
+                                left top, 
+                                right top, 
+                                color-stop(15%, #efbc43),
+                                color-stop(15%, #dfdfdf));
+
+                            background-image: -moz-linear-gradient(left center,
+                                #DF7164 0%, #DF7164 15%,
+                                #F5D0CC 15%, #F5D0CC 100%);
+                        
 
                             &::-moz-range-track {
-                              border: inherit;
-                              background: transparent;
+                                border: none;
+                                background: none;
+                                outline: none;
                             }
-
-                            &::-ms-track {
-                              border: inherit;
-                              color: transparent; /* don't drawn vertical reference line */
-                              background: transparent;
-                            }
-
-                            &::-ms-fill-lower,
-                            &::-ms-fill-upper {
-                              background: transparent;
-                            }
-
-                            &::-ms-tooltip {
-                              display: none;
-                            }
-
-                            /* thumb */
 
                             &::-webkit-slider-thumb {
                                 -webkit-appearance: none;
@@ -1030,34 +1021,20 @@ body{
                                 background: #efbc43;
                                 border: 5px solid #fff;
                                 box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.31);
-                                box-sizing: border-box;
-                            }
-                            &::-moz-range-thumb {
-                                width: 20px;
-                                height: 20px;
-                                border: none;
-                                border-radius: 50%;
-                                background: #efbc43;
-                                border: 5px solid #fff;
-                                box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.31);
-                                box-sizing: border-box;
                             }
 
-                            &::-ms-thumb {
-                                width: 20px;
-                                height: 20px;
+                            &::-moz-range-thumb {
+                                -moz-appearance: none !important;
+                                background-color: #df7164;
                                 border: none;
+                                height: 13px;
+                                width: 13px;
                                 border-radius: 50%;
-                                background: #efbc43;
-                                border: 5px solid #fff;
-                                box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.31);
-                                box-sizing: border-box;
                             }
                         }
                     }
                 }
             
-        
         }
         
         

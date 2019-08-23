@@ -348,61 +348,61 @@
                                 <div class="range-block">
                                     <div class="range-wrap">
                                         <label for="range">Количество договоров</label>
-                                        <input type="range" class="range">
+                                        <input type="range" class="range"  min="1" max="100" step="1" value="15">
 
                                     </div>
                                     <div class="range-wrap">
-                                        <input type="number" class="input-for-range"  placeholder="Кол-во ">
+                                        <input type="text" class="input-for-range"  placeholder="Кол-во" >
                                     </div>
                                 </div>
                                 <div class="range-block">
                                     <div class="range-wrap">
                                         <label for="range">Количество бух. проводок	</label>
-                                        <input type="range" class="range" required pattern="#[0-9A-Fa-f]{6}">
+                                        <input type="range" class="range" min="1" max="100" step="1" value="15" >
 
                                     </div>
                                     <div class="range-wrap">
-                                        <input type="number" class="input-for-range"  placeholder="Кол-во">
+                                        <input type="text" class="input-for-range"  placeholder="Кол-во" required pattern="#[0-9A-Fa-f]{6}">
                                     </div>
                                 </div>
                                 <div class="range-block">
                                     <div class="range-wrap">
                                         <label for="range">Количество статей баланса</label>
-                                        <input type="range" class="range">
+                                        <input type="range" class="range" min="1" max="100" step="1" value="15">
 
                                     </div>
                                     <div class="range-wrap">
-                                        <input type="number" class="input-for-range"  placeholder="Кол-во">
+                                        <input type="text" class="input-for-range"  placeholder="Кол-во">
                                     </div>
                                 </div>
                                 <div class="range-block">
                                     <div class="range-wrap">
                                         <label for="range">Численность бухгалтерии </label>
-                                        <input type="range" class="range">
+                                        <input type="range" class="range" min="1" max="100" step="1" value="15">
 
                                     </div>
                                     <div class="range-wrap">
-                                        <input type="number" class="input-for-range" placeholder="Кол-во чел">
+                                        <input type="text" class="input-for-range" placeholder="Кол-во чел">
                                     </div>
                                 </div>
                                 <div class="range-block">
                                     <div class="range-wrap">
                                         <label for="range">Вылюта баланса <span>(руб)</span></label>
-                                        <input type="range" class="range">
+                                        <input type="range" class="range" min="1" max="100" step="1" value="15">
 
                                     </div>
                                     <div class="range-wrap">
-                                        <input type="number" class="input-for-range">
+                                        <input type="text" class="input-for-range">
                                     </div>
                                 </div>
                                 <div class="range-block">
                                     <div class="range-wrap">
                                         <label for="range">Выручка от реализации <span>(руб)</span></label>
-                                        <input type="range" class="range">
+                                        <input type="range" class="range" min="1" max="100" step="1" value="15">
 
                                     </div>
                                     <div class="range-wrap">
-                                        <input type="number" class="input-for-range">
+                                        <input type="text" class="input-for-range">
                                     </div>
                                 </div>
                             </div>
@@ -544,5 +544,6 @@
     <script src="js/jQuery-v3.3.1.js"></script>
     <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/range.js"></script>
 </body>
 </html>
