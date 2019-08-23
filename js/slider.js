@@ -7,3 +7,10 @@ $('.cases__cases-line').slick({
   prevArrow: '<div class="cases__btn_right"><i class="fa fa-chevron-right"></i></div>'
 });
 
+$('.slider').slick({
+  infinite: true,
+  slidesToShow: 2,
+  slidesToScroll: 2,
+});
+
+

@@ -461,7 +461,8 @@ body {
   .cases__case-block {
     max-width: 500px !important;
     width: 100% !important;
-    position: relative; }
+    position: relative;
+    outline: none; }
   .cases__circle_left {
     position: absolute;
     left: -15px;
